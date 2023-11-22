@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+
+\usepackage{minted,xcolor}
+\usemintedstyle{monokai}
+\definecolor{bg}{HTML}{282828}
+\usepackage{xcolor, colortbl}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage[hmargin=2cm,vmargin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\definecolor{tableaublue}{RGB}{78, 121, 167}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=tableaublue,      
+    urlcolor=tableaublue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+}
+
+\setlength\parindent{0cm}
+\setlength\headheight{28pt}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{Part~\thesection:}{6pt}{}[{\titlerule[0.5pt]}]
+\titleformat{\subsection}{\normalfont\large\bfseries}{Exercise~\thesubsection:}{6pt}{}
+
+\graphicspath{ {./img/} }
+
+% \title{Practical’s instruction – Networks (week 7)}
+% \author{CSC3833 - Data Visualization and Visual Analytic}
+
+\begin{document}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{CSC8626/CSC8642 - Data Visualization}
+\fancyhead[R]{2023 / 2024}
+
+\begin{center}
+\vspace*{1cm}
+{\textbf {\Huge Practical 4}}\\
+\vspace*{0.5cm}
+{\textbf {\huge Human Perception and Graphic Design}}
+\vspace*{1cm}
+\end{center}
+
+\section{Part 1}
+
+Part one of this assignment is about building a narrative to convey information about displays resolution and the human visual system.
+
+\subsection*{Data}
+
+\underline{Files}: CalculatedResolutions.xlsx\\
+These files are available on the Canvas page of the module, which can be accessed at \href{https://ncl.instructure.com/courses/49730}{link}.\\
+
+\underline{Parameters}:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|m{10cm}|}
+        \hline
+        Display & type of display (tablet, monitor or TV) \\
+        \hline
+        Acuity(min) & acuity of users in arc minutes (1: standard, 0.6: good, 0.13: very good) \\
+        \hline
+        Distance(mm) & viewing distance for this display \\
+        \hline
+        PixelMin(mm) & the smallest distance for two pixels to be distinguished by users (2 x distance x tan(acuity/2)) \\
+        \hline
+        ObsMpix & the maximum observable resolution in mega-pixels (Mpix) = ObsX x ObsY \\
+        \hline
+        ObsX & the maximum observable resolution in X (number of pixels than users can distinguish) \\
+        \hline
+        ObsY & the maximum observable resolution in Y (number of pixels than users can distinguish) \\
+        \hline
+        BetterThanEye & is this display, in this viewing condition, of higher resolution than the eye can see? (is ObsMpix higher than DispMpix?)\\
+        \hline
+        DispMpix & the actual display resolution in mega-pixels = Actual X * Actual Y \\
+        \hline
+        Diagonal(mm) & the physical display size in mm diagonally \\
+        \hline
+        Aspect & the display aspect ratio (often 4:3 or 16:9 FHD)  \\
+        \hline
+        ActualX & the physical number of pixels in X on the display \\
+        \hline
+        ActualY & the physical number of pixels in Y on the display \\
+        \hline
+        Diagonal (pix) & the physical display size in pixel diagonally \\
+        \hline
+    \end{tabular}
+    % \caption{Parameters contained within the dataset}
+    % \label{tab:my_label}
+\end{table}
+
+\subsection{Gestalt principles and safe colour scale}
+
+Visualize how each display’s resolution compare to the eye’s observable resolution at the given visual acuities. Highlight visually where display resolution exceeds the eye’s observable maximum resolution.\\
+
+Find a way to highlight the main message(s) in the data.\\
+
+\section{Part 2}
+
+Part two is about implementing graphic design principles and colour safe scale on your previous work.
+
+\subsection{Gestalt principles}
+
+Take any one report page from practicals 2 and 3. Duplicate it and apply at least two of the Gestalt principles or graphic design principles discussed during lectures.\\
+
+Seek feedback from a demonstrator once you have completed your work.
+
+\subsection{Safe colour scale}
+
+Take any one report page from practicals 2 and 3. Duplicate it and apply colour safe colours.\\
+
+Tips:
+\begin{itemize}
+    \item To update all the colours of a dashboard select the 'View' menu and create a custom theme.
+\end{itemize}
+
+Once again seek feedback from a demonstrator once you have completed your work.\\
+\\
+\\
+You have now completed all the practical exercises. The next practical sessions will be dedicated to the coursework.
+
+\end{document}
